@@ -1,0 +1,9 @@
+migrate_helpers.helper_form:
+  path: '/admin/config/development/rhdc-migrate/helpers'
+  defaults:
+    _form: '\Drupal\migrate_helpers\Form\HelperForm'
+    _title: 'Migrate Helpers'
+  requirements:
+    _permission: 'administer site configuration'
+  options:
+    no_cache: TRUE
