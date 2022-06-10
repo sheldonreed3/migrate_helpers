@@ -1,7 +1,7 @@
 name: Migrate Helpers
 type: module
 description: Helpers for writing custom migrations
-core: 8.x
+core_version_requirement: ^8.8 || ^9
 package: Breakthrough
 dependencies:
   - migrate
