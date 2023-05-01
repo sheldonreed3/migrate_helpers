@@ -26,12 +26,12 @@ class HelperForm extends FormBase {
    *   Camel cased string.
    *
    * @return string
-   *   Word string.
+   *   The returned string.
    */
-  protected function camelToWords($string) {
+  protected function camelToWords($string): string {
     $regex = '/(?<=[a-z])(?=[A-Z])/x';
     $output = preg_split($regex, $string);
-    return implode($output, ' ');
+    return implode(' ', $output);
   }
 
   /**

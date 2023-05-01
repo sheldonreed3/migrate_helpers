@@ -91,11 +91,13 @@ class MigrateHelpers {
     /** @var \Drupal\migrate\Plugin\Migration $migration */
     $migration = \Drupal::service('plugin.manager.migration')
       ->createInstance($migration_id);
-    $executable = new MigrateExecutable($migration, new MigrateMessage());
+    if (!is_null($migration)) {
+      $executable = new MigrateExecutable($migration, new MigrateMessage());
+    }
     $source = $migration->getSourcePlugin();
 
     $source->rewind();
-ksm($source);
+    // ksm($source);
     while ($source->valid()) {
       $row = $source->current();
 
